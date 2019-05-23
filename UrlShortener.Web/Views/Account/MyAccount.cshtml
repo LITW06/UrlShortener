@@ -1,0 +1,24 @@
+﻿@model IEnumerable<UrlShortener.Data.ShortenedUrl>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <table class="table table-hover table-striped table-bordered">
+            <tr>
+                <th>Url</th>
+                <th>Views</th>
+            </tr>
+            @foreach (var url in Model)
+            {
+                <tr>
+                    <td>
+                        <a href="@url.OriginalUrl">@url.OriginalUrl</a>
+                    </td>
+                    <td>
+                        @url.Views
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
